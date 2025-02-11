@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pacman.html">Play Pac-Man</a></li>
-                <li><a href="papers.html">Latest Papers</a></li>
+                <li><a href="papers.html">Latest Papers</a></li> <!-- Ensure this link exists -->
             </ul>
         </nav>
     </header>
@@ -21,9 +21,79 @@
         <section id="papers">
             <h2>Recent Papers</h2>
             <div id="paper-list">
-                <!-- Papers will be dynamically inserted here -->
+                
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06762v1" target="_blank">Equations over Finite Monoids with Infinite Promises</a></h3>
+            <p><strong>Authors:</strong> Alberto Larrauri, Antoine Mottet, Standa Živný</p>
+            <p>Larrauri and \v{Z}ivn\'y recently established a complete complexity classification of the problem of solving a system of equations over a monoid $N$ assuming that a solution exists over a monoid $M$, where both monoids are finite and $M$ admits a homomorphism to $N$. Using the algebraic approach to promise constraint satisfaction problems, we extend their complexity classification in two directions: we obtain a complexity dichotomy in the case where arbitrary relations are added to the monoids, and we moreover allow the monoid $M$ to be finitely generated.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2501.00279v2" target="_blank">Performant Automatic BLAS Offloading on Unified Memory Architecture with   OpenMP First-Touch Style Data Movement</a></h3>
+            <p><strong>Authors:</strong> Junjie Li</p>
+            <p>BLAS is a fundamental building block of advanced linear algebra libraries and many modern scientific computing applications. GPUs are known for their strong arithmetic computing capabilities and are highly suited for BLAS operations. However, porting code to GPUs often requires significant effort, especially for large, complex codes or legacy codes, even for BLAS-heavy applications. While various tools exist to automatically offload BLAS to GPUs, they are often impractical due to the high costs associated with mandatory data transfers. The advent of unified memory architectures in recent GPU designs, such as the NVIDIA Grace-Hopper, allows cache-coherent memory access across all types of memory for both CPU and GPU, potentially eliminating the bottlenecks faced in conventional architectures. This breakthrough paves the way for innovative application developments and porting strategies. Building on our preliminary work demonstrating the potential of automatic *gemm offload, this paper extends the framework to all level-3 BLAS operations and introduces SCILIB-Accel, a novel tool for automatic BLAS offload. SCILIB-Accel leverages the memory coherency in Grace-Hopper and introduces a Device First-Use data movement policy inspired by the OpenMP First-Touch approach in multi-socket CPU programming, minimizing CPU-GPU data transfers for typical scientific computing codes. Additionally, utilizing dynamic binary instrumentation, the tool intercepts BLAS symbols directly from a CPU binary, requiring no code modifications or recompilation. SCILIB-Accel has been evaluated using multiple quantum physics codes on up to a few hundred GPU nodes, yielding promising speedups. Notably, for the LSMS method in the MuST suite, a 3x speedup was achieved on Grace-Hopper compared to Grace-Grace.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06740v1" target="_blank">Symmetric Algebraic Circuits and Homomorphism Polynomials</a></h3>
+            <p><strong>Authors:</strong> Anuj Dawar, Benedikt Pago, Tim Seppelt</p>
+            <p>The central open question of algebraic complexity is whether VP is unequal to VNP, which is saying that the permanent cannot be represented by families of polynomial-size algebraic circuits. For symmetric algebraic circuits, this has been confirmed by Dawar and Wilsenach (2020) who showed exponential lower bounds on the size of symmetric circuits for the permanent. In this work, we set out to develop a more general symmetric algebraic complexity theory. Our main result is that a family of symmetric polynomials admits small symmetric circuits if and only if they can be written as a linear combination of homomorphism counting polynomials of graphs of bounded treewidth. We also establish a relationship between the symmetric complexity of subgraph counting polynomials and the vertex cover number of the pattern graph. As a concrete example, we examine the symmetric complexity of immanant families (a generalisation of the determinant and permanent) and show that a known conditional dichotomy due to Curticapean (2021) holds unconditionally in the symmetric setting.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06718v1" target="_blank">Kirillov polynomials for the exceptional Lie algebra $\mathfrak g_2$</a></h3>
+            <p><strong>Authors:</strong> Martin T. Luu</p>
+            <p>As part of the development of the orbit method, Kirillov has counted the number of strictly upper triangular matrices with coefficients in a finite field of $q$ elements and fixed Jordan type. One obtains polynomials with respect to $q$ with many interesting properties and close relation to type A representation theory. In the present work we develop the corresponding theory for the exceptional Lie algebra $\mathfrak g_2$. In particular, we show that the leading coefficient can be expressed in terms of the Springer correspondence.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06712v1" target="_blank">A note on multiplicative roots of multivariable formal power series</a></h3>
+            <p><strong>Authors:</strong> Piotr Maćkowiak, Motaz Mokatren</p>
+            <p>Suppose that we are given a formal power series of many variables with coefficients in $\mathbb{R}$ (or $\mathbb{C}$) and we want to compute its $n$-th (multiplicative) root. As can be expected coefficients of the root have to satisfy a system of infinitely many equations. We present such a system of equations that strictly corresponds with the system for $n$-th of a formal power series of one variable. With help of an example we show that the case of formal power series of many variables is very different from the one variable case with respect to the existence of roots.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06697v1" target="_blank">There Is An Equivalence Relation Whose von Neumann Algebra Is Not Connes   Embeddable</a></h3>
+            <p><strong>Authors:</strong> Aareyan Manzoor</p>
+            <p>MIP$^*$=RE [Ji+22] was used to prove the existence of a non Connes embeddable tracial von Neumann algebra. Recently, similar ideas were used in [Bow+24, BCV24] to give a negative solution to the Aldous-Lyons conjecture: there is a non co-sofic IRS on any non-abelian free group. We define a notion of hyperlinearity for an IRS and show that there is a non co-hyperlinear IRS on any non-abelian free group, which reproves the main results of [Bow+24, BCV24]. As a corollary, we prove that there is a relation whose von Neumann algebra is not Connes embeddable.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06677v1" target="_blank">Saito's theorem revisited and application to free pencils of   hypersurfaces</a></h3>
+            <p><strong>Authors:</strong> Roberta Di Gennaro, Rosa Maria Miró-Roig</p>
+            <p>A hypersurface $X\subset \mathbb P^n$ is said to be free if its associated sheaf $T_X$ of vector fields tangent to $X$ is a free ${\mathcal O}_{\mathbb P^n}$-module. So far few examples of free hypersurfaces are known. In this short note, we reinterpret Saito's criterion of freeness in terms of multiple eigenschemes (ME) and as application we construct huge families of new examples of free reduced hypersurfaces in $\mathbb P^n$. All of them are union of hypersurfaces in a suitable pencil.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2403.11745v2" target="_blank">On the height of the universal abelian variety</a></h3>
+            <p><strong>Authors:</strong> José Ignacio Burgos Gil, Jürg Kramer</p>
+            <p>In this paper we extend the arithmetic intersection theory of adelic divisors on quasiprojective varieties developed by X. Yuan and S. W. Zhang to cover certain adelic arithmetic divisors that are not nef nor integrable. The key concept used in this extension is the relative finite energy introduced by T. Darvas, E. Di Nezza, and C. H. Lu. As an application, we prove that the line bundle of Siegel--Jacobi forms on the universal abelian variety endowed with its invariant hermitian metric is not integrable but we compute its arithmetic self-intersection number using the new extension. The techniques developed in this paper can be applied in many other situations like mixed Shimura varieties or the moduli space of stable marked curves.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06670v1" target="_blank">Sectional category of subgroup inclusions and sequential topological   complexities of aspherical spaces as A-genus</a></h3>
+            <p><strong>Authors:</strong> Arturo Espinosa Baro</p>
+            <p>In this note we characterize the sectional category of subgroup inclusions and the $r^{th}$-sequential topological complexity of aspherical spaces of a group G in terms of the A-genus in the sense of Clapp-Puppe and Bartsch for a suitable one-element family of G-spaces A, and we discuss some of the consequences of such characterization, including new ideas about notions of category-like invariants with respect to proper actions of groups.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.06621v1" target="_blank">Three meta-questions on infinite-domain Constraint Satisfaction Problems</a></h3>
+            <p><strong>Authors:</strong> Michael Pinsker, Jakub Rydval, Moritz Schöbi, Christoph Spiess</p>
+            <p>The Feder-Vardi dichotomy conjecture for Constraint Satisfaction Problems (CSPs) with finite templates, confirmed independently by Bulatov and Zhuk, has a counterpart for infinite templates due to Bodirsky and Pinsker which remains wide open. We resolve several meta-problems on the scope of their conjecture. Our first two main results provide two fundamental simplifications of this scope, one of structural, and the other one of algebraic nature. The former simplification implies that the conjecture is equivalent to its restriction to templates without algebraicity, a crucial assumption in the most powerful classification methods. The latter yields that the higher-arity invariants of any template within its scope can be assumed to be essentially injective, and hence any algebraic condition characterizing any complexity class within the conjecture must be satisfiable by injections, thus lifting the mystery of the better applicability of certain conditions over others. Our third main result uses the first one to show that any tractable template within the scope serves, up to a Datalog-computable modification of it, as the witness of the tractability of a finite-domain Promise Constraint Satisfaction Problem (PCSP) by the so-called sandwiching method. This provides a strong hitherto unknown connection between infinite-domain CSPs and finite-domain PCSPs.</p>
+        </div>
+        <hr>
+        
             </div>
-            <p>Last updated: <!-- Insert timestamp here --></p>
+            <p>Last updated: 2025-02-10 23:59:59</p>
         </section>
     </main>
     <footer>
