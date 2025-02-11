@@ -5,7 +5,7 @@ import sys
 import re
 
 # Configuration
-SEARCH_QUERY = "physics"
+SEARCH_QUERY = "science"
 MAX_RESULTS = 10  # Number of papers to fetch
 OUTPUT_FILE = "papers.html"
 
@@ -137,10 +137,13 @@ def main():
     
     papers = parse_arxiv_response(xml_data)
     if not papers:
-        print("No papers found. Please check your query or the arXiv API response.")
-    else:
-        paper_html, timestamp = generate_html(papers)
-        update_html_file(paper_html, timestamp, OUTPUT_FILE)
+        print("No papers found for this keyword. Updating timestamp anyway...")
+    
+    paper_html, timestamp = generate_html(papers)
+    
+    # Always call update_html_file() so timestamp is updated every time
+    # even if no new papers are found.
+    update_html_file(paper_html, timestamp, OUTPUT_FILE)
 
 if __name__ == "__main__":
     main()
