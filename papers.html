@@ -8,85 +8,22 @@
 <body>
     <header>
         <h1>Latest Papers</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pacman.html">Play Pac-Man</a></li>
+                <li><a href="papers.html">Latest Papers</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="papers">
             <h2>Recent Papers</h2>
-            <p>Last updated: 2025-02-11 16:17:22</p>
+            <p>Search keyword: <!-- Insert keyword here --></p>
+            <p>Last updated: <!-- Insert timestamp here --></p>
             <div id="paper-list">
                 <!-- Papers will be dynamically inserted here -->
-
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2501.17903v2" target="_blank">Free Agent in Agent-Based Mixture-of-Experts Generative AI Framework</a></h3>
-            <p><strong>Authors:</strong> Jung-Hua Liu</p>
-            <p>Multi-agent systems commonly distribute tasks among specialized, autonomous agents, yet they often lack mechanisms to replace or reassign underperforming agents in real time. Inspired by the free-agency model of Major League Baseball, the Reinforcement Learning Free Agent (RLFA) algorithm introduces a reward-based mechanism to detect and remove agents exhibiting persistent underperformance and seamlessly insert more capable ones. Each agent internally uses a mixture-of-experts (MoE) approach, delegating incoming tasks to specialized sub-models under the guidance of a gating function. A primary use case is fraud detection, where RLFA promptly swaps out an agent whose detection accuracy dips below a preset threshold. A new agent is tested in a probationary mode, and upon demonstrating superior performance, fully replaces the underperformer. This dynamic, free-agency cycle ensures sustained accuracy, quicker adaptation to emerging threats, and minimal disruption to ongoing operations. By continually refreshing its roster of agents, the system fosters ongoing improvements and more resilient collaboration in multi-agent Generative AI environments.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2501.09153v1" target="_blank">Layered Dirichlet Modeling to Assess the Changing Contributions of MLB   Players as they Age</a></h3>
-            <p><strong>Authors:</strong> Monnie McGee, Jacob Turner, Bianca Luedeker</p>
-            <p>The productive career of a professional athlete is limited compared to the normal human lifespan. Most professional athletes have retired by age 40. The early retirement age is due to a combination of age-related performance and life considerations. While younger players typically are stronger and faster than their older teammates, older teammates add value to a team due to their experience and perspective. Indeed, the highest--paid major league baseball players are those over the age of 35. These players contribute intangibly to a team through mentorship of younger players; however, their peak athletic performance has likely passed. Given this, it is of interest to learn how more mature players contribute to a team in measurable ways. We examine the distribution of plate appearance outcomes from three different age groups as compositional data, using Layered Dirichlet Modeling (LDM). We develop a hypothesis testing framework to compare the average proportions of outcomes for each component among 3 of more groups. LDM can not only determine evidence for differences among populations, but also pinpoint within which component the largest changes are likely to occur. This framework can determine where players can be of most use as they age.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2411.15721v1" target="_blank">Research on Effectiveness Evaluation and Optimization of Baseball   Teaching Method Based on Machine Learning</a></h3>
-            <p><strong>Authors:</strong> Shaoxuan Sun, Jingao Yuan, Yuelin Yang</p>
-            <p>In modern physical education, data-driven evaluation methods have gradually attracted attention, especially the quantitative prediction of students' sports performance through machine learning model. The purpose of this study is to use a variety of machine learning models to regress and predict students' comprehensive scores in baseball training, so as to evaluate the effectiveness of the current baseball teaching methods and put forward targeted training optimization suggestions. We set up a model and evaluate the performance of students by collecting many characteristics, such as hitting times, running times and batting. The experimental results show that K-Neighbors Regressor and Gradient Boosting Regressor are excellent in comprehensive prediction accuracy and stability, and the R score and error index are significantly better than other models. In addition, through the analysis of feature importance, it is found that cumulative hits and cumulative runs are the key factors affecting students' comprehensive scores. Based on the results of this study, this paper puts forward some suggestions on optimizing training strategies to help students get better performance in baseball training. The results show that the data-driven teaching evaluation method can effectively support physical education and promote personalized and refined teaching plan design.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2411.15075v1" target="_blank">The Effects of Major League Baseball's Ban on Infield Shifts: A   Quasi-Experimental Analysis</a></h3>
-            <p><strong>Authors:</strong> Lee Kennedy-Shaffer</p>
-            <p>From 2020 to 2023, Major League Baseball changed rules affecting team composition, player positioning, and game time. Understanding the effects of these rules is crucial for leagues, teams, players, and other relevant parties to assess their impact and to advocate either for further changes or undoing previous ones. Panel data and quasi-experimental methods provide useful tools for causal inference in these settings. I demonstrate this potential by analyzing the effect of the 2023 shift ban at both the league-wide and player-specific levels. Using difference-in-differences analysis, I show that the policy increased batting average on balls in play and on-base percentage for left-handed batters by a modest amount (nine points). For individual players, synthetic control analyses identify several players whose offensive performance (on-base percentage, on-base plus slugging percentage, and weighted on-base average) improved substantially (over 70 points in several cases) because of the rule change, and other players with previously high shift rates for whom it had little effect. This article both estimates the impact of this specific rule change and demonstrates how these methods for causal inference are potentially valuable for sports analytics -- at the player, team, and league levels -- more broadly.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2411.11012v1" target="_blank">Optimizing Daily Fantasy Baseball Lineups: A Linear Programming Approach   for Enhanced Accuracy</a></h3>
-            <p><strong>Authors:</strong> Max Grody, Sandeep Bansal, Huthaifa I. Ashqar</p>
-            <p>Daily fantasy baseball has shortened the life cycle of an entire fantasy season into a single day. As of today, it has become familiar with more than 10 million people around the world who participate in online fantasy. As daily fantasy continues to grow, the importance of selecting a winning lineup becomes more valuable. The purpose of this paper is to determine how accurate FanDuel current daily fantasy strategy of optimizing daily lineups are and utilize python and linear programming to build a lineup optimizer for daily fantasy sports with the goal of proposing a more accurate model to assist daily fantasy participants select a winning lineup.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2411.00898v1" target="_blank">Replace-then-Perturb: Targeted Adversarial Attacks With Visual Reasoning   for Vision-Language Models</a></h3>
-            <p><strong>Authors:</strong> Jonggyu Jang, Hyeonsu Lyu, Jungyeon Koh, Hyun Jong Yang</p>
-            <p>The conventional targeted adversarial attacks add a small perturbation to an image to make neural network models estimate the image as a predefined target class, even if it is not the correct target class. Recently, for visual-language models (VLMs), the focus of targeted adversarial attacks is to generate a perturbation that makes VLMs answer intended target text outputs. For example, they aim to make a small perturbation on an image to make VLMs' answers change from "there is an apple" to "there is a baseball." However, answering just intended text outputs is insufficient for tricky questions like "if there is a baseball, tell me what is below it." This is because the target of the adversarial attacks does not consider the overall integrity of the original image, thereby leading to a lack of visual reasoning. In this work, we focus on generating targeted adversarial examples with visual reasoning against VLMs. To this end, we propose 1) a novel adversarial attack procedure -- namely, Replace-then-Perturb and 2) a contrastive learning-based adversarial loss -- namely, Contrastive-Adv. In Replace-then-Perturb, we first leverage a text-guided segmentation model to find the target object in the image. Then, we get rid of the target object and inpaint the empty space with the desired prompt. By doing this, we can generate a target image corresponding to the desired prompt, while maintaining the overall integrity of the original image. Furthermore, in Contrastive-Adv, we design a novel loss function to obtain better adversarial examples. Our extensive benchmark results demonstrate that Replace-then-Perturb and Contrastive-Adv outperform the baseline adversarial attack algorithms. We note that the source code to reproduce the results will be available.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2407.01797v2" target="_blank">Empirical Determination of Baseball Eras: Multivariate Changepoint   Analysis in Major League Baseball</a></h3>
-            <p><strong>Authors:</strong> Mena CR Whalen, Gregory J Matthews, Brian M Mills</p>
-            <p>We use multivariate change point analysis methods, to identify not only mean shifts but also changes in variance across a wide array of statistical time series. Our primary objective is to empirically discern distinct eras in the evolution of baseball, shedding light on significant transformations in team performance and management strategies. We leverage a rich dataset comprising baseball statistics from the late 1800s to 2020, spanning over a century of the sport's history. Results confirm previous historical research, pinpointing well-known baseball eras, such as the Dead Ball Era, Integration Era, Steroid Era, and Post-Steroid Era. Moreover, the study delves into the detection of substantial changes in team performance, effectively identifying periods of both dynasties and collapses within a team's history. The multivariate change point analysis proves to be a valuable tool for understanding the intricate dynamics of baseball's evolution. The method offers a data-driven approach to unveil structural shifts in the sport's historical landscape, providing fresh insights into the impact of rule changes, player strategies, and external factors on baseball's evolution. This not only enhances our comprehension of baseball, showing more robust identification of eras than past univariate time series work, but also showcases the broader applicability of multivariate change point analysis in the domain of sports research and beyond.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2409.08172v3" target="_blank">A Bayesian framework to evaluate evidence in cases of alleged cheating   with secret codes in sports</a></h3>
-            <p><strong>Authors:</strong> Aafko Boonstra, Ronald Meester</p>
-            <p>We develop a statistical framework to evaluate evidence of alleged cheating with illegal signalling in sports from a forensic perspective. We explain why instead of a frequenstic procedure, a Bayesian approach is called for. We apply this framework to cases of alleged cheating in professional bridge and professional baseball. The diversity of these applications illustrates the generality of the method.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2409.17129v1" target="_blank">Bayesian Bivariate Conway-Maxwell-Poisson Regression Model for   Correlated Count Data in Sports</a></h3>
-            <p><strong>Authors:</strong> Mauro Florez, Michele Guindani, Marina Vannucci</p>
-            <p>Count data play a crucial role in sports analytics, providing valuable insights into various aspects of the game. Models that accurately capture the characteristics of count data are essential for making reliable inferences. In this paper, we propose the use of the Conway-Maxwell-Poisson (CMP) model for analyzing count data in sports. The CMP model offers flexibility in modeling data with different levels of dispersion. Here we consider a bivariate CMP model that models the potential correlation between home and away scores by incorporating a random effect specification. We illustrate the advantages of the CMP model through simulations. We then analyze data from baseball and soccer games before, during, and after the COVID-19 pandemic. The performance of our proposed CMP model matches or outperforms standard Poisson and Negative Binomial models, providing a good fit and an accurate estimation of the observed effects in count data with any level of dispersion. The results highlight the robustness and flexibility of the CMP model in analyzing count data in sports, making it a suitable default choice for modeling a diverse range of count data types in sports, where the data dispersion may vary.</p>
-        </div>
-        <hr>
-        
-        <div class="paper">
-            <h3><a href="http://arxiv.org/pdf/2410.03690v1" target="_blank">Conversational Swarms of Humans and AI Agents enable Hybrid   Collaborative Decision-making</a></h3>
-            <p><strong>Authors:</strong> Louis Rosenberg, Hans Schumann, Christopher Dishop, Gregg Willcox, Anita Woolley, Ganesh Mani</p>
-            <p>Conversational Swarm Intelligence (CSI) is an AI-powered communication and collaboration technology that allows large, networked groups (of potentially unlimited size) to hold thoughtful conversational deliberations in real-time. Inspired by the efficient decision-making dynamics of fish schools, CSI divides a human population into a set of small subgroups connected by AI agents. This enables the full group to hold a unified conversation. In this study, groups of 25 participants were tasked with selecting a roster of players in a real Fantasy Baseball contest. A total of 10 trials were run using CSI. In half the trials, each subgroup was augmented with a fact-providing AI agent referred to herein as an Infobot. The Infobot was loaded with a wide range of MLB statistics. The human participants could query the Infobot the same way they would query other persons in their subgroup. Results show that when using CSI, the 25-person groups outperformed 72% of individually surveyed participants and showed significant intelligence amplification versus the mean score (p=0.016). The CSI-enabled groups also significantly outperformed the most popular picks across the collected surveys for each daily contest (p<0.001). The CSI sessions that used Infobots scored slightly higher than those that did not, but it was not statistically significant in this study. That said, 85% of participants agreed with the statement 'Our decisions were stronger because of information provided by the Infobot' and only 4% disagreed. In addition, deliberations that used Infobots showed significantly less variance (p=0.039) in conversational content across members. This suggests that Infobots promoted more balanced discussions in which fewer members dominated the dialog. This may be because the infobot enabled participants to confidently express opinions with the support of factual data</p>
-        </div>
-        <hr>
-        
-<!-- END PAPERS -->
+                <!-- END PAPERS -->
             </div>
         </section>
     </main>
