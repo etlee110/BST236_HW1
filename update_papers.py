@@ -15,15 +15,19 @@ def fetch_arxiv_papers(query, max_results=10):
     return response.text
 
 def parse_arxiv_response(xml_data):
+    # Define the namespaces
+    namespaces = {
+        'atom': 'http://www.w3.org/2005/Atom',
+        'arxiv': 'http://arxiv.org/schemas/atom'
+    }
     root = ET.fromstring(xml_data)
-    namespace = {'arxiv': 'http://www.w3.org/2005/Atom'}
     papers = []
-    for entry in root.findall('arxiv:entry', namespace):
-        title = entry.find('arxiv:title', namespace).text.strip().replace('\n', ' ')
-        authors = ', '.join([author.find('arxiv:name', namespace).text for author in entry.findall('arxiv:author', namespace)])
-        abstract = entry.find('arxiv:summary', namespace).text.strip().replace('\n', ' ')
+    for entry in root.findall('atom:entry', namespaces):
+        title = entry.find('atom:title', namespaces).text.strip().replace('\n', ' ')
+        authors = ', '.join([author.find('atom:name', namespaces).text for author in entry.findall('atom:author', namespaces)])
+        abstract = entry.find('atom:summary', namespaces).text.strip().replace('\n', ' ')
         pdf_url = ""
-        for link in entry.findall('arxiv:link', namespace):
+        for link in entry.findall('atom:link', namespaces):
             if link.attrib.get('title') == 'pdf':
                 pdf_url = link.attrib['href']
                 break
@@ -66,8 +70,11 @@ def update_html_file(paper_html, timestamp, output_file):
 def main():
     xml_data = fetch_arxiv_papers(SEARCH_QUERY, MAX_RESULTS)
     papers = parse_arxiv_response(xml_data)
-    paper_html, timestamp = generate_html(papers)
-    update_html_file(paper_html, timestamp, OUTPUT_FILE)
+    if not papers:
+        print("No papers found. Please check your query or the arXiv API response.")
+    else:
+        paper_html, timestamp = generate_html(papers)
+        update_html_file(paper_html, timestamp, OUTPUT_FILE)
 
 if __name__ == "__main__":
     main()
