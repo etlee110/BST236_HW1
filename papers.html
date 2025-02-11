@@ -19,11 +19,82 @@
     <main>
         <section id="papers">
             <h2>Recent Papers</h2>
-            <p>Search keyword: <!-- Insert keyword here --></p>
-            <p>Last updated: <!-- Insert timestamp here --></p>
+            <p>Search keyword: football</p>
+            <p>Last updated: 2025-02-11 11:23:12</p>
             <div id="paper-list">
                 <!-- Papers will be dynamically inserted here -->
-                <!-- END PAPERS -->
+
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2411.10400v2" target="_blank">The Loser's Curse Revisited: A Case Study of the Critical Role of   Specifying a Utility Function</a></h3>
+            <p><strong>Authors:</strong> Ryan S. Brill, Abraham J. Wyner</p>
+            <p>A longstanding question in the judgment and decision making literature is whether experts, even in high-stakes environments, exhibit the same cognitive biases observed in controlled experiments with inexperienced participants. In their seminal work, Massey and Thaler (2013) provide a notable example of bias and irrationality in expert decision making: general managers' behavior in the National Football League draft pick trade market. They argue that general managers systematically overvalue top draft picks, which generate less surplus value on average than later first-round picks, a phenomenon known as the loser's curse. Their conclusion hinges on the assumption that general managers should use expected surplus value as their utility function for evaluating draft picks. This assumption, however, is neither explicitly justified nor necessarily aligned with the strategic complexities of constructing a National Football League roster. In this paper, we challenge their framework by considering alternative utility functions, particularly those that emphasize the acquisition of transformational players--those capable of dramatically increasing a team's chances of winning the Super Bowl. Under a decision rule that prioritizes the probability of acquiring elite players, which we construct from a novel Bayesian hierarchical Beta regression model, general managers' draft trade behavior appears rational rather than systematically flawed. More broadly, our findings highlight the critical role of carefully specifying a utility function when evaluating the quality of decisions.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.04864v1" target="_blank">$TAR^2$: Temporal-Agent Reward Redistribution for Optimal Policy   Preservation in Multi-Agent Reinforcement Learning</a></h3>
+            <p><strong>Authors:</strong> Aditya Kapoor, Kale-ab Tessera, Mayank Baranwal, Harshad Khadilkar, Stefano Albrecht, Mingfei Sun</p>
+            <p>In cooperative multi-agent reinforcement learning (MARL), learning effective policies is challenging when global rewards are sparse and delayed. This difficulty arises from the need to assign credit across both agents and time steps, a problem that existing methods often fail to address in episodic, long-horizon tasks. We propose Temporal-Agent Reward Redistribution $TAR^2$, a novel approach that decomposes sparse global rewards into agent-specific, time-step-specific components, thereby providing more frequent and accurate feedback for policy learning. Theoretically, we show that $TAR^2$ (i) aligns with potential-based reward shaping, preserving the same optimal policies as the original environment, and (ii) maintains policy gradient update directions identical to those under the original sparse reward, ensuring unbiased credit signals. Empirical results on two challenging benchmarks, SMACLite and Google Research Football, demonstrate that $TAR^2$ significantly stabilizes and accelerates convergence, outperforming strong baselines like AREL and STAS in both learning speed and final performance. These findings establish $TAR^2$ as a principled and practical solution for agent-temporal credit assignment in sparse-reward multi-agent systems.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.03342v1" target="_blank">Statistical analysis of team formation and player roles in football</a></h3>
+            <p><strong>Authors:</strong> Ali Baouan</p>
+            <p>The availability of tracking data in football presents unique opportunities for analyzing team shape and player roles, but leveraging it effectively remains challenging. This difficulty arises from the significant overlap in player positions, which complicates the identification of distinct roles and team formations. In this work, we propose a novel model that incorporates a hidden permutation matrix to simultaneously estimate team formations and assign roles to players at the frame level. To address the cardinality of permutation sets, we develop a statistical procedure to parsimoniously select relevant matrices prior to parameter estimation. Additionally, to capture formation changes during a match, we introduce a latent regime variable, enabling the modeling of dynamic tactical adjustments. This framework disentangles player locations from role-specific positions, providing a clear representation of team structure. We demonstrate the applicability of our approach using player tracking data, showcasing its potential for detailed team and player analysis.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2304.05242v2" target="_blank">Generation of Threat: Crediting football players for creating dangerous   actions in an unbiased way</a></h3>
+            <p><strong>Authors:</strong> Ali Baouan, Sébastien Coustou, Mathieu Lacome, Sergio Pulido, Mathieu Rosenbaum</p>
+            <p>We introduce an innovative methodology to identify football players at the origin of threatening actions in a team. In our framework, a threat is defined as entering the opposing team's danger area. We investigate the timing of threat events and ball touches of players, and capture their correlation using Hawkes processes. Our model-based approach allows us to evaluate a player's ability to create danger both directly and through interactions with teammates. We define a new index, called Generation of Threat (GoT), that measures in an unbiased way the contribution of a player to threat generation. For illustration, we present a detailed analysis of Chelsea's 2016-2017 season, with a standout performance from Eden Hazard. We are able to credit each player for his involvement in danger creation and determine the main circuits leading to threat. In the same spirit, we investigate the danger generation process of Stade Rennais in the 2021-2022 season. Furthermore, we establish a comprehensive ranking of Ligue 1 players based on their generated threat in the 2021-2022 season. Our analysis reveals surprising results, with players such as Jason Berthomier, Moses Simon and Frederic Guilbert among the top performers in the GoT rankings. We also present a ranking of Ligue 1 central defenders in terms of generation of threat and confirm the great performance of some center-back pairs, such as Nayef Aguerd and Warmed Omari.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.02565v1" target="_blank">Revisiting Expected Possession Value in Football: Introducing a   Benchmark, U-Net Architecture, and Reward and Risk for Passes</a></h3>
+            <p><strong>Authors:</strong> Thijs Overmeer, Tim Janssen, Wim P. M. Nuijten</p>
+            <p>This paper introduces the first Expected Possession Value (EPV) benchmark and a new and improved EPV model for football. Through the introduction of the OJN-Pass-EPV benchmark, we present a novel method to quantitatively assess the quality of EPV models by using pairs of game states with given relative EPVs. Next, we attempt to replicate the results of Fern\'andez et al. (2021) using a dataset containing Dutch Eredivisie and World Cup matches. Following our failure to do so, we propose a new architecture based on U-net-type convolutional neural networks, achieving good results in model loss and Expected Calibration Error. Finally, we present an improved pass model that incorporates ball height and contains a new dual-component pass value model that analyzes reward and risk. The resulting EPV model correctly identifies the higher value state in 78% of the game state pairs in the OJN-Pass-EPV benchmark, demonstrating its ability to accurately assess goal-scoring potential. Our findings can help assess the quality of EPV models, improve EPV predictions, help assess potential reward and risk of passing decisions, and improve player and team performance.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.01613v1" target="_blank">Statistical enhance learning for modeling and prediction tennis matches   at Grand Slam tournaments</a></h3>
+            <p><strong>Authors:</strong> Nourah Buhamra, Andreas Groll</p>
+            <p>In this manuscript, we concentrate on a specific type of covariates, which we call statistically enhanced, for modeling tennis matches for men at Grand slam tournaments. Our goal is to assess whether these enhanced covariates have the potential to improve statistical learning approaches, in particular, with regard to the predictive performance. For this purpose, various proposed regression and machine learning model classes are compared with and without such features. To achieve this, we considered three slightly enhanced variables, namely elo rating along with two different player age variables. This concept has already been successfully applied in football, where additional team ability parameters, which were obtained from separate statistical models, were able to improve the predictive performance.   In addition, different interpretable machine learning (IML) tools are employed to gain insights into the factors influencing the outcomes of tennis matches predicted by complex machine learning models, such as the random forest. Specifically, partial dependence plots (PDP) and individual conditional expectation (ICE) plots are employed to provide better interpretability for the most promising ML model from this work. Furthermore, we conduct a comparison of different regression and machine learning approaches in terms of various predictive performance measures such as classification rate, predictive Bernoulli likelihood, and Brier score. This comparison is carried out on external test data using cross-validation, rolling window, and expanding window strategies.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2502.01444v1" target="_blank">Identification and Optimization of High-Performance Passing Networks in   Football</a></h3>
+            <p><strong>Authors:</strong> Andres Chacoma</p>
+            <p>This study explores the relationship between the performance of a football team and the topological parameters of temporal passing networks. To achieve this, we propose a method to identify moments of high and low team performance based on the analysis of match events. This approach enables the construction of sets of temporal passing networks associated with each performance context. By analyzing topological metrics such as clustering, eigenvector centrality, and betweenness across both sets, significant structural differences were identified between moments of high and low performance. These differences reflect changes in the interaction dynamics among players and, consequently, in the team's playing system. Subsequently, a logistic regression model was employed to classify high- and low-performance networks. The analysis of the model coefficients identified which metrics need to be adjusted to promote the emergence of structures associated with better performance. This framework provides quantitative tools to guide tactical decisions and optimize playing dynamics. Finally, the proposed method was applied to address the ``blocked player" problem, optimizing passing relationships to minimize the emergence of structures associated with low performance, thereby ensuring more robust dynamics against contextual changes.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2311.03490v6" target="_blank">Analytics, have some humility: a statistical view of fourth-down   decision making</a></h3>
+            <p><strong>Authors:</strong> Ryan S. Brill, Ronald Yurko, Abraham J. Wyner</p>
+            <p>The standard mathematical approach to fourth-down decision making in American football is to make the decision that maximizes estimated win probability. Win probability estimates arise from machine learning models fit from historical data. These models attempt to capture a nuanced relationship between a noisy binary outcome variable and game-state variables replete with interactions and non-linearities from a finite dataset of just a few thousand games. Thus, it is imperative to knit uncertainty quantification into the fourth-down decision procedure; we do so using bootstrapping. We find that uncertainty in the estimated optimal fourth-down decision is far greater than that currently expressed by sports analysts in popular sports media.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2501.12337v1" target="_blank">Understanding User Preference -- Comparison between Linear and   Directional Top-K Query results</a></h3>
+            <p><strong>Authors:</strong> Xiaolei Jiang</p>
+            <p>This paper investigates user preferences for Linear Top-k Queries and Directional Top-k Queries, two methods for ranking results in multidimensional datasets. While Linear Queries prioritize weighted sums of attributes, Directional Queries aim to deliver more balanced results by incorporating the spatial relationship between data points and a user-defined preference line. The study explores how preferences for these methods vary across different contexts by focusing on two real-world topics: used cars (e-commerce domain) and football players (personal interest domain). A user survey involving 106 participants was conducted to evaluate preferences, with results visualized as scatter plots for comparison. The findings reveal a significant preference for directional queries in the used cars topic, where balanced results align better with user goals. In contrast, preferences in the football players topic were more evenly distributed, influenced by user expertise and familiarity with the domain. Additionally, the study demonstrates that the two specific topics selected for this research exhibit significant differences in their impact on user preferences. This research reveals authentic user preferences, highlighting the practical utility of Directional Queries for lifestyle-related applications and the subjective nature of preferences in specialized domains. These insights contribute to advancing personalized database technologies, guiding the development of more user-centric ranking systems.</p>
+        </div>
+        <hr>
+        
+        <div class="paper">
+            <h3><a href="http://arxiv.org/pdf/2501.10449v1" target="_blank">Improving Student Self-Efficacy in Quantum Computing with the Qubit   Touchdown Board Game</a></h3>
+            <p><strong>Authors:</strong> Kristina Armbruster, Gintaras Duda, Thomas G. Wong</p>
+            <p>Qubit Touchdown is a two-player, competitive board game that was developed to introduce students to quantum computing. A quantum computer is a new kind of computer that is based on the laws of quantum physics, and it can solve certain problems faster than normal computers because it follows a different set of rules. Qubit Touchdown's game play mirrors the rules of (American) football, with players taking turns moving the football to score the most touchdowns, and no knowledge of quantum computing is needed to play the game. We evaluated the game with 107 public high school students in Precalculus, Advanced Placement (AP) Statistics, and/or AP Physics 1 courses, assessing whether their interest in and self-efficacy toward quantum computing changed as a result of playing the game and learning about its connections to quantum computing. We also assessed whether the game was easy to learn and enjoyable. We found that students' self-efficacy was improved by 33.4%, and they widely considered the game accessible and fun. Thus, Qubit Touchdown could be an effective resource to introduce students to Quantum Computing and boost their confidence in learning about the field. Free printables of the game are available, and professionally produced copies can be purchased on demand.</p>
+        </div>
+        <hr>
+        
+<!-- END PAPERS -->
             </div>
         </section>
     </main>

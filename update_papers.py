@@ -5,7 +5,7 @@ import sys
 import re
 
 # Configuration
-SEARCH_QUERY = "baseball"
+SEARCH_QUERY = "football"
 MAX_RESULTS = 10  # Number of papers to fetch
 OUTPUT_FILE = "papers.html"
 
@@ -83,7 +83,7 @@ def update_html_file(paper_html, timestamp, output_file):
         print(f"Error: {output_file} not found.")
         sys.exit(1)
     
-    # Replace papers content using a callback function
+    # Replace papers content
     def paper_replacer(match):
         return f'<!-- Papers will be dynamically inserted here -->\n{paper_html}\n<!-- END PAPERS -->'
     
@@ -94,15 +94,18 @@ def update_html_file(paper_html, timestamp, output_file):
         flags=re.DOTALL
     )
 
-    # Replace timestamp using a callback function
-    def timestamp_replacer(match):
-        return f'Last updated: {timestamp}'
-    
+    # Replace timestamp
     content = re.sub(
         r'Last updated: .*?(?=</p>)',
-        timestamp_replacer,
-        content,
-        flags=re.DOTALL
+        f'Last updated: {timestamp}',
+        content
+    )
+
+    # Replace keyword
+    content = re.sub(
+        r'Search keyword: .*?(?=</p>)',
+        f'Search keyword: {SEARCH_QUERY}',
+        content
     )
 
     with open(output_file, 'w', encoding='utf-8') as f:
