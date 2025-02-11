@@ -35,7 +35,7 @@ jobs:
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add papers.html
-        git commit -m "Update latest arXiv papers [skip ci]" || echo "No changes to commit"
+        git commit -m "Update latest arXiv papers" --allow-empty
         git push
 
     - name: Trigger GitHub Pages Deployment
