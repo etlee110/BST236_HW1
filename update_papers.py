@@ -5,7 +5,7 @@ import sys
 import re
 
 # Configuration
-SEARCH_QUERY = "football"
+SEARCH_QUERY = "science"
 MAX_RESULTS = 10  # Number of papers to fetch
 OUTPUT_FILE = "papers.html"
 
