@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header nav a {
+    color: #00f;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px; /* Increased gap for better spacing */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Left Section: Canvas */
+.game-left {
+    /* No additional styles needed */
+}
+
+/* Right Section: Score, Lives, and Start Button */
+.game-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Score and Lives */
+.score, .lives {
+    font-size: 24px;
+    color: yellow;
+    margin: 10px 0;
+}
+
+/* Canvas */
+#gameCanvas {
+    background-color: #000;
+    border: 2px solid black;
+    margin: 20px 0;
+}
+
+/* Start Button */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ffed4a;
+}
+
+#startButton {
+    padding: 15px 30px;
+    font-size: 20px;
+}
