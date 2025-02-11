@@ -25,9 +25,9 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v3
 
-      # Step 3: Upload artifacts for GitHub Pages
+      # Step 3: Upload artifact for GitHub Pages (Corrected name)
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v2  # Ensure this is for GitHub Pages
         with:
           path: ./  # Deploy the root directory
 
