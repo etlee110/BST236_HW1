@@ -87,9 +87,12 @@ def update_html_file(paper_html, timestamp, output_file):
         print(f"Error: {output_file} not found.")
         sys.exit(1)
     
-    # Replace the placeholders with the new content
+    # Replace the papers placeholder with the new content
     new_content = content.replace('<!-- Papers will be dynamically inserted here -->', paper_html)
+    # Replace the timestamp placeholder with the new timestamp
     new_content = new_content.replace('<!-- Insert timestamp here -->', timestamp)
+    # Reinsert the timestamp placeholder for future runs
+    new_content = new_content.replace(f"Last updated: {timestamp}", "Last updated: <!-- Insert timestamp here -->")
     
     if new_content == content:
         print("No changes detected in papers.html.")
