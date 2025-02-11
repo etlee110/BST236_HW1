@@ -1,6 +1,6 @@
 # Coding Blog
 
-Welcome to my coding blog! This repository contains the source code for my personal coding blog website, which is hosted on GitHub Pages. 
+This repository contains my responses to Homework 1, Pacman and auto-updating paper archive. 
 
 ## Project Structure
 
@@ -26,11 +26,11 @@ To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/coding-blog.git
+   git clone https://etlee110/BST236_HW1.git
    ```
 2. Navigate to the project directory:
    ```
-   cd coding-blog
+   cd BST236_HW1
    ```
 3. Open `src/index.html` in your web browser to view the homepage.
 
