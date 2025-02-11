@@ -37,3 +37,8 @@ jobs:
         git add papers.html
         git commit -m "Update latest arXiv papers [skip ci]" || echo "No changes to commit"
         git push
+          - name: Trigger GitHub Pages Deployment
+    - name: Trigger GitHub Pages Deployment
+      run: |
+        git commit --allow-empty -m "Trigger GitHub Pages deployment"
+        git push
