@@ -2,6 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 from datetime import datetime
 import sys
+import re
 
 # Configuration
 SEARCH_QUERY = "science"
@@ -88,11 +89,22 @@ def update_html_file(paper_html, timestamp, output_file):
         sys.exit(1)
     
     # Replace the papers placeholder with the new content
+    if '<!-- Papers will be dynamically inserted here -->' not in content:
+        print("Error: Papers placeholder not found in papers.html.")
+        sys.exit(1)
     new_content = content.replace('<!-- Papers will be dynamically inserted here -->', paper_html)
-    # Replace the timestamp placeholder with the new timestamp
-    new_content = new_content.replace('<!-- Insert timestamp here -->', timestamp)
-    # Reinsert the timestamp placeholder for future runs
-    new_content = new_content.replace(f"Last updated: {timestamp}", "Last updated: <!-- Insert timestamp here -->")
+    
+    # Use regex to replace the 'Last updated' line
+    # This ensures that the timestamp is always updated
+    new_content, num_subs = re.subn(r'Last updated: .+', f'Last updated: {timestamp}', new_content)
+    
+    if num_subs == 0:
+        print("Error: Last updated line not found in papers.html.")
+        sys.exit(1)
+    
+    print("true/false")
+    print(new_content == content)
+    print("true/false")
     
     if new_content == content:
         print("No changes detected in papers.html.")
