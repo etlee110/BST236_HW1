@@ -18,7 +18,7 @@ let lives = 3;
 let isGameRunning = false;
 
 // Power Pellet duration in milliseconds
-const POWER_PELLET_DURATION = 10000;
+const POWER_PELLET_DURATION = 20000;
 
 // Pac-Man object with reduced radius
 let pacman = {
