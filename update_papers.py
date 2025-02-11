@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 # Configuration
-SEARCH_QUERY = "algebra"
+SEARCH_QUERY = "science"
 MAX_RESULTS = 10  # Number of papers to fetch
 OUTPUT_FILE = "papers.html"
 
