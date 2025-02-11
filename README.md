@@ -1,6 +1,6 @@
 # Coding Blog
 
-Welcome to my coding blog! This repository contains the source code for my personal coding blog website, which is hosted on GitHub Pages. 
+This repository contains my responses to Homework 1, Pacman and auto-updating paper archive. 
 
 ## Project Structure
 
