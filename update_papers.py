@@ -10,6 +10,7 @@ OUTPUT_FILE = "papers.html"
 def fetch_arxiv_papers(query, max_results=10):
     url = f"http://export.arxiv.org/api/query?search_query=all:{query}&start=0&max_results={max_results}&sortBy=lastUpdatedDate&sortOrder=descending"
     response = requests.get(url)
+    print(f"Status Code: {response.status_code}")
     if response.status_code != 200:
         raise Exception(f"Failed to fetch data from arXiv API. Status code: {response.status_code}")
     return response.text
@@ -69,12 +70,23 @@ def update_html_file(paper_html, timestamp, output_file):
 
 def main():
     xml_data = fetch_arxiv_papers(SEARCH_QUERY, MAX_RESULTS)
+    print("Raw XML Response:\n", xml_data[:1000])  # Print only the first 1000 characters for readability
     papers = parse_arxiv_response(xml_data)
     if not papers:
         print("No papers found. Please check your query or the arXiv API response.")
     else:
         paper_html, timestamp = generate_html(papers)
         update_html_file(paper_html, timestamp, OUTPUT_FILE)
+        print("\nExtracted Papers:")
+        for i, paper in enumerate(papers):
+            print(f"\nPaper {i+1}:")
+            print(f"Title: {paper['title']}")
+            print(f"Authors: {paper['authors']}")
+            print(f"Abstract: {paper['abstract'][:300]}...")  # Print only the first 300 characters for readability
+            print(f"PDF URL: {paper['pdf_url']}")
 
 if __name__ == "__main__":
     main()
+
+
+    
