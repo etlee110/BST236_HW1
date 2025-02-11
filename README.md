@@ -26,11 +26,11 @@ To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/coding-blog.git
+   git clone https://etlee110/BST236_HW1.git
    ```
 2. Navigate to the project directory:
    ```
-   cd coding-blog
+   cd BST236_HW1
    ```
 3. Open `src/index.html` in your web browser to view the homepage.
 
