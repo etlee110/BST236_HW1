@@ -5,7 +5,7 @@ import sys
 import re
 
 # Configuration
-SEARCH_QUERY = "science"
+SEARCH_QUERY = "baseball"
 MAX_RESULTS = 10  # Number of papers to fetch
 OUTPUT_FILE = "papers.html"
 
@@ -26,7 +26,6 @@ def fetch_arxiv_papers(query, max_results=10):
         sys.exit(1)
 
 def parse_arxiv_response(xml_data):
-    # Define the namespaces
     namespaces = {
         'atom': 'http://www.w3.org/2005/Atom',
         'arxiv': 'http://arxiv.org/schemas/atom'
@@ -45,7 +44,6 @@ def parse_arxiv_response(xml_data):
         )
         abstract = entry.find('atom:summary', namespaces).text.strip().replace('\n', ' ')
         
-        # Find the PDF URL
         pdf_url = ""
         for link in entry.findall('atom:link', namespaces):
             if link.attrib.get('title') == 'pdf':
@@ -75,10 +73,7 @@ def generate_html(papers):
         <hr>
         """
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    # Append a unique timestamp to ensure Git detects changes
-    footer = f"<p>Last updated: {timestamp}</p>"
-    complete_html = paper_items + footer
-    return complete_html, timestamp
+    return paper_items, timestamp
 
 def update_html_file(paper_html, timestamp, output_file):
     try:
@@ -88,36 +83,53 @@ def update_html_file(paper_html, timestamp, output_file):
         print(f"Error: {output_file} not found.")
         sys.exit(1)
     
-    # Replace the papers placeholder with the new content
+    # Replace papers content using a callback function
+    def paper_replacer(match):
+        return f'<!-- Papers will be dynamically inserted here -->\n{paper_html}\n<!-- END PAPERS -->'
+    
+    content = re.sub(
+        r'<!-- Papers will be dynamically inserted here -->.*?<!-- END PAPERS -->',
+        paper_replacer,
+        content,
+        flags=re.DOTALL
+    )
+
+    # Replace timestamp using a callback function
+    def timestamp_replacer(match):
+        return f'Last updated: {timestamp}'
+    
+    content = re.sub(
+        r'Last updated: .*?(?=</p>)',
+        timestamp_replacer,
+        content,
+        flags=re.DOTALL
+    )
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(content)
+    
+    print(f"Updated {output_file} successfully.")
+
+def restore_placeholders(content):
+    """ Ensure that the placeholders exist in the HTML file """
     if '<!-- Papers will be dynamically inserted here -->' not in content:
-        print("Error: Papers placeholder not found in papers.html.")
-        sys.exit(1)
-    new_content = content.replace('<!-- Papers will be dynamically inserted here -->', paper_html)
+        content = content.replace(
+            '<div id="paper-list">', '<div id="paper-list">\n<!-- Papers will be dynamically inserted here -->\n<!-- END PAPERS -->'
+        )
     
-    # Use regex to replace the 'Last updated' line
-    # This ensures that the timestamp is always updated
-    new_content, num_subs = re.subn(r'Last updated: .+', f'Last updated: {timestamp}', new_content)
-    
-    if num_subs == 0:
-        print("Error: Last updated line not found in papers.html.")
-        sys.exit(1)
-    
-    print("true/false")
-    print(new_content == content)
-    print("true/false")
-    
-    if new_content == content:
-        print("No changes detected in papers.html.")
-    else:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-        print(f"Updated {output_file} successfully.")
+    if '<!-- Insert timestamp here -->' not in content:
+        content = re.sub(
+            r'Last updated: .*',
+            'Last updated: <!-- Insert timestamp here -->',
+            content
+        )
+
+    return content
 
 def main():
     print("Starting arXiv papers update process...")
     xml_data = fetch_arxiv_papers(SEARCH_QUERY, MAX_RESULTS)
     
-    # Optional: Print the first 1000 characters of the raw XML for debugging
     print("Raw XML Response (first 1000 characters):\n", xml_data[:1000], "\n")
     
     papers = parse_arxiv_response(xml_data)
@@ -126,15 +138,6 @@ def main():
     else:
         paper_html, timestamp = generate_html(papers)
         update_html_file(paper_html, timestamp, OUTPUT_FILE)
-        
-        # Print extracted papers for verification
-        print("\nExtracted Papers:")
-        for i, paper in enumerate(papers, start=1):
-            print(f"\nPaper {i}:")
-            print(f"Title: {paper['title']}")
-            print(f"Authors: {paper['authors']}")
-            print(f"Abstract: {paper['abstract'][:300]}...")  # Print only the first 300 characters for readability
-            print(f"PDF URL: {paper['pdf_url']}")
 
 if __name__ == "__main__":
     main()
