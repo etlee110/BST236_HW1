@@ -8,12 +8,11 @@ The project is organized as follows:
 
 ```
 coding-blog
-├── src
-│   ├── index.html        # Main HTML document for the homepage
-│   ├── styles
-│   │   └── main.css      # CSS styles for the homepage
-│   ├── scripts
-│       └── main.js       # JavaScript for interactive elements
+├── index.html        # Main HTML document for the homepage
+├── styles
+│   └── main.css      # CSS styles for the homepage
+├──scripts
+│   └── main.js       # JavaScript for interactive elements
 ├── .github
 │   └── workflows
 │       └── deploy.yml    # GitHub Actions workflow for deployment
