@@ -56,5 +56,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Post Deployment Info
-        run: echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
+      # Removed or commented out to fix YAML syntax error
+      # - name: Post Deployment Info
+      #   run: echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
