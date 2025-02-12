@@ -2,45 +2,9 @@
 
 This repository contains my responses to Homework 1, Pacman and auto-updating paper archive. 
 
-## Project Structure
-
-The project is organized as follows:
-
-```
-coding-blog
-├── index.html        # Main HTML document for the homepage
-├── styles
-│   └── main.css      # CSS styles for the homepage
-├──scripts
-│   └── main.js       # JavaScript for interactive elements
-├── .github
-│   └── workflows
-│       └── deploy.yml    # GitHub Actions workflow for deployment
-├── .gitignore            # Files and directories to ignore in Git
-└── README.md             # Project documentation
-```
-
-## Getting Started
-
-To get a local copy of the project up and running, follow these steps:
-
-1. Clone the repository:
-   ```
-   git clone https://etlee110/BST236_HW1.git
-   ```
-2. Navigate to the project directory:
-   ```
-   cd BST236_HW1
-   ```
-3. Open `src/index.html` in your web browser to view the homepage.
-
 ## Deployment
 
 This project uses GitHub Actions to automatically deploy the website to GitHub Pages. The deployment configuration can be found in the `.github/workflows/deploy.yml` file. 
-
-## Note on Late Days
-
-I used 0 late days this time, and I have 3 days remaining.
 
 ## Acknowledgments
 
