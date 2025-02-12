@@ -1,4 +1,3 @@
-# .github/workflows/update_papers.yml
 name: Update and Deploy arXiv Papers
 
 on:
