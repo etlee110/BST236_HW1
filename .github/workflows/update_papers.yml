@@ -1,5 +1,5 @@
 # .github/workflows/update_papers.yml
-name: Update arXiv Papers
+name: Update and Deploy arXiv Papers
 
 on:
   schedule:
@@ -8,9 +8,11 @@ on:
 
 permissions:
   contents: write  # Allows the workflow to push commits
+  pages: write     # Allows deployment to GitHub Pages
+  id-token: write  # Required for GitHub Pages deployment
 
 jobs:
-  update_papers:
+  update_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,3 +45,18 @@ jobs:
           else
             echo "No changes to commit."
           fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'  # Adjust if your static files are in a subdirectory
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Post Deployment Info
+        run: echo "Deployment URL: ${{ steps.deployment.outputs.page_url }}"
